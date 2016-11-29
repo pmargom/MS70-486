@@ -1,0 +1,17 @@
+﻿@model IEnumerable<OdeToFood.Models.Restaurant>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@foreach (var item in Model)
+{
+    <div>
+        <h4>@item.Name</h4>
+        <div>
+            @item.City, @item.Country @Html.ActionLink("view rating", "Rating")
+        </div>
+
+        <hr />
+    </div>
+}
